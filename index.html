@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prototüüp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<a href="start.html" class="back-button">tagasi</a>
+
+  <div class="container">
+    <h1>Koodik</h1>
+
+    <p>
+      Tee näitusel foto teosest. Lae see üles ja taasta see koodi abil.
+    </p>
+
+    <div class="grid">
+
+      <!-- LEFT -->
+      <div class="panel">
+
+        <h2>lae fail üles</h2>
+        <input type="file" id="upload" accept="image/*" />
+
+        <h2>Kood</h2>
+
+        <textarea id="code"></textarea>
+
+        <p class="hint">
+          Muuda numbreid ja vaata kuidas pilt muutub.
+        </p>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="panel">
+
+        <h2>live vaade</h2>
+        <canvas id="canvas" width="600" height="400"></canvas>
+
+        <div class="values">
+          <div id="bVal"></div>
+          <div id="rVal"></div>
+          <div id="blurVal"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
