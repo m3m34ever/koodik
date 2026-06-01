@@ -4,9 +4,27 @@
 
 body {
   margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  background: #b6ff3b;
+  font-family: "Inter", sans-serif;
   color: #000;
+
+  background:
+    linear-gradient(
+      800deg,
+      #dfff7f 0%,
+      #b6ff3b 45%,
+      #a5f019 70%,
+      #c7ff52 100%
+    );
+}
+
+.logo {
+  width: clamp(250px, 60vw, 800px);
+  height: auto;
+}
+
+.logo-start {
+  width: clamp(100px, 30vw, 500px);
+  height: auto;
 }
 
 /* MAIN WRAPPER */
@@ -21,19 +39,37 @@ body {
    ========================= */
 
 h1 {
-  font-size: 74px;
+  font-size: 90px;
   font-weight: 900;
   margin-bottom: 10px;
   text-transform: uppercase;
   color: #000;
   line-height: 0.95;
+  font-family: Irish Grover;
+}
+
+.start-page h1 {
+  font-size: clamp(120px, 20vw, 260px);
+  line-height: 0.8;
+  margin-top: -20px;
 }
 
 p {
   font-size: 18px;
   color: #111;
   margin-bottom: 30px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.irish-grover-regular {
+  font-family: "Irish Grover", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* =========================
    MAIN GRID (APP PAGE)
@@ -56,11 +92,12 @@ p {
 
 /* SECTION TITLES */
 h2 {
-  font-size: 26px;
-  font-weight: 900;
+  font-size: 20px;
+  font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 18px;
   color: #000;
+  font-family: "Inter", sans-serif;
 }
 
 /* FILE INPUT */
@@ -72,6 +109,7 @@ input[type="file"] {
   border: 2px solid #000;
   background: #fff;
   padding: 10px;
+  font-family: "Inter", sans-serif;
 }
 
 /* FILE BUTTON */
@@ -80,8 +118,9 @@ input[type="file"]::file-selector-button {
   color: #b6ff3b;
   border: none;
   padding: 12px 16px;
-  font-weight: 900;
+  font-weight: 600;
   cursor: pointer;
+    font-family: "Inter", sans-serif;
 }
 
 input[type="file"]::file-selector-button:hover {
@@ -113,14 +152,15 @@ canvas {
 
 #scoreDisplay {
   margin-top: 18px;
-  font-size: 22px;
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 400;
   text-transform: uppercase;
   background: #000;
   color: #b6ff3b;
   padding: 10px 14px;
   border-radius: 8px;
   display: inline-block;
+    font-family: "Inter", sans-serif;
 }
 
 /* HINT TEXT */
@@ -128,7 +168,8 @@ canvas {
   margin-top: 12px;
   font-size: 13px;
   color: #000;
-  font-weight: 600;
+  font-weight: 400;
+    font-family: "Inter", sans-serif;
 }
 
 /* VALUE TAGS */
@@ -143,7 +184,7 @@ canvas {
   background: #000;
   color: #b6ff3b;
   padding: 8px 12px;
-  font-weight: 900;
+  font-weight: 200;
   font-size: 12px;
   text-transform: uppercase;
   border-radius: 6px;
@@ -167,7 +208,7 @@ canvas {
   background: #d8ff7a;
   border: 3px solid #000;
   border-radius: 14px;
-  padding: 30px;
+  padding: 40px;
   box-shadow: 6px 6px 0px #000;
   transition: 0.15s ease;
 }
@@ -207,10 +248,11 @@ canvas {
   background: black;
   color: #ffffff;
   text-decoration: none;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   border-radius: 20px;
   transition: 0.2s ease;
+  z-index:2;
 }
 
 .back-button:hover {
@@ -235,226 +277,14 @@ canvas {
   h1 {
     font-size: 48px;
   }
-}
 
-/* =========================
-   START PAGE CENTER FIX
-   ========================= */
-
-body.start-page {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.start-page .container {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.start-page .level-grid {
-  justify-content: center;
-}
-
-.start-page h1,
-.start-page p {
-  text-align: center;
-}
-
-@media (max-width: 900px) {
-  .start-page .level-grid {
-    justify-items: center;
-  }
-}
-/* =========================
-   MAIN GRID (APP PAGE)
-   ========================= */
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
-/* PANELS */
-.panel {
-  background: #d8ff7a;
+  .level-card {
   border: 3px solid #000;
   border-radius: 14px;
-  padding: 28px;
-  box-shadow: 6px 6px 0px #000;
-}
-
-/* SECTION TITLES */
-h2 {
-  font-size: 26px;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-  color: #000;
-}
-
-/* FILE INPUT */
-input[type="file"] {
+  padding: 40px;
   width: 100%;
-  margin-bottom: 25px;
-  font-size: 14px;
-  color: #000;
-  border: 2px solid #000;
-  background: #fff;
-  padding: 10px;
 }
 
-/* FILE BUTTON */
-input[type="file"]::file-selector-button {
-  background: #000;
-  color: #b6ff3b;
-  border: none;
-  padding: 12px 16px;
-  font-weight: 900;
-  cursor: pointer;
-}
-
-input[type="file"]::file-selector-button:hover {
-  background: #222;
-}
-
-/* TEXTAREA (CODE) */
-textarea {
-  width: 100%;
-  height: 260px;
-  border: 3px solid #000;
-  border-radius: 12px;
-  padding: 18px;
-  background: #fff;
-  color: #000;
-  font-size: 14px;
-  font-family: "Courier New", monospace;
-  resize: none;
-  outline: none;
-}
-
-/* CANVAS */
-canvas {
-  width: 100%;
-  border-radius: 12px;
-  background: #fff;
-  border: 3px solid #000;
-}
-
-/* HINT TEXT */
-.hint {
-  margin-top: 12px;
-  font-size: 13px;
-  color: #000;
-  font-weight: 600;
-}
-
-/* VALUE TAGS */
-.values {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.values div {
-  background: #000;
-  color: #b6ff3b;
-  padding: 8px 12px;
-  font-weight: 900;
-  font-size: 12px;
-  text-transform: uppercase;
-  border-radius: 6px;
-}
-
-/* =========================
-   LEVEL SELECT (START PAGE)
-   ========================= */
-
-.level-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-top: 30px;
-}
-
-.level-card {
-  display: block;
-  text-decoration: none;
-  color: #000;
-  background: #d8ff7a;
-  border: 3px solid #000;
-  border-radius: 14px;
-  padding: 30px;
-  box-shadow: 6px 6px 0px #000;
-  transition: 0.15s ease;
-}
-
-.level-card:hover {
-  transform: translate(-3px, -3px);
-}
-
-.level-card h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.level-card p {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.tag {
-  display: inline-block;
-  background: #000;
-  color: #b6ff3b;
-  padding: 6px 10px;
-  font-weight: 900;
-  border-radius: 6px;
-}
-
-/* =========================
-   BACK BUTTON
-   ========================= */
-
-.back-button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px 18px;
-  background: black;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  border-radius: 20px;
-  transition: 0.2s ease;
-}
-
-.back-button:hover {
-  transform: scale(1.05);
-  background: #ffffff;
-  color: black;
-}
-
-/* =========================
-   RESPONSIVE
-   ========================= */
-
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .level-grid {
-    grid-template-columns: 1fr;
-  }
-
-  h1 {
-    font-size: 48px;
-  }
 }
 
 /* =========================
